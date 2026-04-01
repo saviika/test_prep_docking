@@ -16,5 +16,6 @@ pip install -r requirements.txt
 ```
 - запустить скрипт в зависимости от того какой файл мы считываем
 ```
-python test_prep_docking.py -i test.sdf / test.smi -o output_sdf / output_smi
+python test_prep_docking.py -i test.smi -o output_smi
+python test_prep_docking.py -i test.sdf -o output_sdf
 ```
