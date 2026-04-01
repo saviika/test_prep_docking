@@ -57,7 +57,7 @@ def ensure_h_3d(mol, seed):
 # получаем pdbqt
 def rdkit_to_pdbqt(mol):
 
-    preparator = MoleculePreparation( #доп звдвние, больше 5 атомов - гибкие
+    preparator = MoleculePreparation(  # доп звдвние, больше 5 атомов - гибкие
         rigid_macrocycles=False,
         min_ring_size=6
     )
@@ -131,7 +131,8 @@ def convert_smi(smi_path, out_dir, seed):
 
 def main():
     parser = argparse.ArgumentParser(description="SDF/SMI - PDBQT")
-    parser.add_argument("-i", "--input", required=True, help="входной файл (.sdf / .smi)")
+    parser.add_argument("-i", "--input", required=True,
+                        help="входной файл (.sdf / .smi)")
     parser.add_argument("-o", "--out", required=True, help="папка для PDBQT")
     parser.add_argument("--seed", type=int, help="seed для 3D")
 
